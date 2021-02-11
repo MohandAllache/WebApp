@@ -1,0 +1,368 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainMenu">
+
+
+    <TextView
+        android:id="@+id/logout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/logout"
+        android:textColor="@color/white"
+        android:background="@color/purple_light"
+        android:padding="5dp"
+        android:clickable="true"
+        android:onClick="logout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:fontFamily="sans-serif"
+        android:text="NotSkribbl.io"
+        android:textColor="@color/purple_light"
+        android:textSize="75sp"
+        app:layout_constraintBottom_toTopOf="@+id/constraintLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.214" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout"
+        android:layout_width="745dp"
+        android:layout_height="595dp"
+        android:background="@drawable/border_layout"
+        android:clickable="false"
+        android:elevation="8dp"
+        android:soundEffectsEnabled="false"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.158"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.736">
+
+
+        <TextView
+            android:id="@+id/menutitle"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:background="@drawable/header_border"
+            android:fontFamily="monospace"
+            android:paddingLeft="25dp"
+            android:paddingTop="5dp"
+            android:text="@string/main_menu"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:insetBottom="-1dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tvplay"
+            android:layout_width="186.25dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/active_tab"
+            android:clickable="true"
+            android:focusable="true"
+            android:gravity="center"
+            android:text="@string/play"
+            android:onClick="openPlayMenu"
+            android:textColor="@color/purple_light"
+            app:layout_constraintBottom_toBottomOf="@+id/menutitle"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/clplaymenu"
+            android:layout_width="match_parent"
+            android:layout_height="524dp"
+            android:visibility="visible"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/menutitle"
+            app:layout_constraintVertical_bias="1.0">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="PLAY MENU"
+                android:textSize="70dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <TextView
+            android:id="@+id/tvprofil"
+            android:layout_width="186.25dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@color/header_navy_blue"
+            android:clickable="true"
+            android:focusable="true"
+            android:gravity="center"
+            android:text="@string/profile"
+            android:onClick="openProfilMenu"
+            android:textColor="@color/white"
+            app:layout_constraintBottom_toBottomOf="@+id/menutitle"
+            app:layout_constraintStart_toEndOf="@+id/tvplay" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/clprofilmenu"
+            android:layout_width="match_parent"
+            android:layout_height="524dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:visibility="gone"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/menutitle"
+            app:layout_constraintVertical_bias="1.0">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="PROFIL MENU"
+                android:textSize="70dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <TextView
+            android:id="@+id/tvtutorial"
+            android:layout_width="186.25dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@color/header_navy_blue"
+            android:clickable="true"
+            android:focusable="true"
+            android:gravity="center"
+            android:text="@string/tutorial"
+            android:onClick="openTutorialMenu"
+            android:textColor="@color/white"
+            app:layout_constraintBottom_toBottomOf="@+id/menutitle"
+            app:layout_constraintStart_toEndOf="@+id/tvprofil" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/cltutorialmenu"
+            android:layout_width="match_parent"
+            android:layout_height="524dp"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/menutitle"
+            app:layout_constraintVertical_bias="1.0">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="TUTORIAL MENU"
+                android:textSize="70dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <TextView
+            android:id="@+id/tvoptions"
+            android:layout_width="186.25dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@color/header_navy_blue"
+            android:clickable="true"
+            android:focusable="true"
+            android:gravity="center"
+            android:text="@string/options"
+            android:onClick="openSettingsMenu"
+            android:textColor="@color/white"
+            app:layout_constraintBottom_toBottomOf="@+id/menutitle"
+            app:layout_constraintStart_toEndOf="@+id/tvtutorial" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/cloptionsmenu"
+            android:layout_width="match_parent"
+            android:layout_height="524dp"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/menutitle"
+            app:layout_constraintVertical_bias="1.0">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="SETTINGS MENU"
+                android:textSize="70dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout2"
+        android:layout_width="351dp"
+        android:layout_height="595dp"
+        android:elevation="8dp"
+        android:background="@drawable/border_layout"
+        android:clickable="false"
+        android:soundEffectsEnabled="false"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.42"
+        app:layout_constraintStart_toEndOf="@+id/constraintLayout"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.736">
+
+
+        <TextView
+            android:id="@+id/chattitle"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:background="@drawable/header_border"
+            android:fontFamily="monospace"
+            android:paddingLeft="25dp"
+            android:paddingTop="5dp"
+            android:text="@string/chat"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tvactive"
+            android:layout_width="117dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/active_tab"
+            android:clickable="true"
+            android:focusable="true"
+            android:onClick="updateActiveChat"
+            android:gravity="center"
+            android:text="@string/active"
+            android:textColor="@color/purple_light"
+            app:layout_constraintBottom_toBottomOf="@+id/chattitle"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <TextView
+            android:id="@+id/tvjoin"
+            android:layout_width="117dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@color/header_navy_blue"
+            android:clickable="true"
+            android:focusable="true"
+            android:onClick="updateJoinChat"
+            android:gravity="center"
+            android:text="@string/join"
+            android:textColor="@color/white"
+            app:layout_constraintBottom_toBottomOf="@+id/chattitle"
+            app:layout_constraintStart_toEndOf="@+id/tvactive" />
+
+        <TextView
+            android:id="@+id/tvcreate"
+            android:layout_width="117dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@color/header_navy_blue"
+            android:clickable="true"
+            android:focusable="true"
+            android:gravity="center"
+            android:onClick="openCreateChat"
+            android:text="@string/create_chat"
+            android:textColor="@color/white"
+            app:layout_constraintBottom_toBottomOf="@+id/chattitle"
+            app:layout_constraintStart_toEndOf="@+id/tvjoin" />
+
+
+        <ListView
+            android:id="@+id/listActive"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/chattitle"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <EditText
+            android:id="@+id/etmessageinput"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Message :"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <ListView
+            android:id="@+id/listJoin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/chattitle"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/clcreategame"
+            android:layout_width="match_parent"
+            android:layout_height="526dp"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/chattitle"
+            app:layout_constraintVertical_bias="0.0">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="CREATE CHAT INTERFACE"
+                android:textSize="25dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

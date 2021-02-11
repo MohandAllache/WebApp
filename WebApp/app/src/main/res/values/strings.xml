@@ -1,0 +1,42 @@
+<resources>
+    //app title
+    <string name="app_name">NotSkribbl.io</string>
+
+    //login
+    <string name="connexion">Connexion</string>
+    <string name="incorrect_login">Nom d\'utilisateur ou mot de passe incorrect</string>
+    <string name="connect">Se Connecter</string>
+    <string name="create_in_connect"><u>Créer un compte</u></string>
+
+    //create an account
+    <string name="name">Prénom</string>
+    <string name="lastname">Nom</string>
+    <string name="confirmpassword">Confirmer mot de passe</string>
+    <string name="submit">Soumettre</string>
+    <string name="avatar">Avatar</string>
+    <string name="create_account">Créer un compte</string>
+    <string name="connexion_in_create"><u>Retour</u></string>
+    <string name="existing_user">Le nom d\'utilisateur existe déjà</string>
+    <string name="fail">Le création du compte a échouée</string>
+    <string name="pwerror">Les mots de passe ne sont pas identiques</string>
+
+    //login/create common
+    <string name="username">Nom d\'utilisateur</string>
+    <string name="password">Mot de passe</string>
+
+    //main menu
+    <string name="main_menu">Menu principal</string>
+    <string name="play">Jouer</string>
+    <string name="profile">Profil</string>
+    <string name="tutorial">Tutoriel</string>
+    <string name="options">Options</string>
+    <string name="logout"><u>Déconnexion</u></string>
+
+    //chat
+    <string name="chat">Clavardage</string>
+    <string name="join">Joindre</string>
+    <string name="active">Conversations</string>
+    <string name="create_chat">Créer</string>
+
+
+</resources>
